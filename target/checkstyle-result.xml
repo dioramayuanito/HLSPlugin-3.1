@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/DashSampler.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/segmentbuilders/SegmentTemplateBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/segmentbuilders/SegmentBaseBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/segmentbuilders/SegmentListBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/segmentbuilders/MultiSegmentBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/segmentbuilders/BaseSegmentBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/DashMediaSegment.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/MediaPeriod.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/MediaRepresentation.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/UrlTemplateSolver.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/SegmentBuilder.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/dash/Manifest.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/TimeMachine.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/Protocol.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/MediaSegment.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/MediaStreamSelector.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/VideoStreamSelector.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/VideoStreamingPlayback.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/VideoStreamingSampler.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/exception/PlaylistParsingException.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/exception/PlaylistDownloadException.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/exception/SamplerInterruptedException.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/VideoStreamingHttpClient.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/core/SampleResultProcessor.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/hls/HlsSampler.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/hls/Playlist.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/videostreaming/hls/MediaStream.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/gui/HlsSamplerPanel.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/gui/HlsSamplerGui.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/gui/BlazeMeterLabsLogo.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/logic/VideoStreamingSamplerFactory.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/logic/HlsSampler.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/logic/ResolutionSelector.java">
+</file>
+<file name="/home/mate/HLSPlugin-3.1/src/main/java/com/blazemeter/jmeter/hls/logic/BandwidthSelector.java">
+</file>
+</checkstyle>
