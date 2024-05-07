@@ -18,6 +18,9 @@ import javax.swing.JTextField;
 public class HlsSamplerPanel extends JPanel {
 
   private JTextField masterUrlField;
+  
+  private JTextField ezdrmDashPostUrlField;
+  private JTextField ezdrmDashPostDataField;
 
   private JRadioButton playVideoDurationOption;
   private JTextField playSecondsField;
@@ -47,6 +50,8 @@ public class HlsSamplerPanel extends JPanel {
 
   private void initComponents() {
     JPanel urlPanel = buildUrlPanel();
+    JPanel urlPanel2 = buildUrlPanel2();
+    JPanel dataPanel = buildDataPanel();
     JPanel durationPanel = buildDurationPanel();
     JPanel trackPanel = buildTracksPanel();
     JPanel bandwidthPanel = buildBandwidthPanel();
@@ -62,6 +67,10 @@ public class HlsSamplerPanel extends JPanel {
     layout.setHorizontalGroup(layout.createParallelGroup()
         .addComponent(urlPanel, GroupLayout.PREFERRED_SIZE,
             GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)
+        .addComponent(urlPanel2, GroupLayout.PREFERRED_SIZE,
+            GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)
+        .addComponent(dataPanel, GroupLayout.PREFERRED_SIZE,
+            GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)
         .addComponent(protocolSelectionPanel, GroupLayout.PREFERRED_SIZE,
             GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)
         .addGroup(layout.createSequentialGroup()
@@ -76,6 +85,10 @@ public class HlsSamplerPanel extends JPanel {
     );
     layout.setVerticalGroup(layout.createSequentialGroup()
         .addComponent(urlPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+            GroupLayout.PREFERRED_SIZE)
+        .addComponent(urlPanel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+            GroupLayout.PREFERRED_SIZE)
+        .addComponent(dataPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
             GroupLayout.PREFERRED_SIZE)
         .addComponent(protocolSelectionPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
             GroupLayout.PREFERRED_SIZE)
@@ -113,7 +126,47 @@ public class HlsSamplerPanel extends JPanel {
         .addComponent(masterUrlField));
     return panel;
   }
+  
+  private JPanel buildUrlPanel2() {
+    JPanel panel = new JPanel();
+    panel.setBorder(BorderFactory.createTitledBorder("EZDRM DASH Post URL"));
 
+    JLabel urlLabel = new JLabel("URL");
+    ezdrmDashPostUrlField = namedComponent("ezdrmDashPostUrlField", new JTextField(80));
+
+    GroupLayout layout = new GroupLayout(panel);
+    layout.setAutoCreateContainerGaps(true);
+    layout.setAutoCreateGaps(true);
+    panel.setLayout(layout);
+    layout.setHorizontalGroup(layout.createSequentialGroup()
+        .addComponent(urlLabel)
+        .addComponent(ezdrmDashPostUrlField));
+    layout.setVerticalGroup(layout.createParallelGroup(Alignment.BASELINE)
+        .addComponent(urlLabel)
+        .addComponent(ezdrmDashPostUrlField));
+    return panel;
+  }
+
+  private JPanel buildDataPanel() {
+    JPanel panel = new JPanel();
+    panel.setBorder(BorderFactory.createTitledBorder("EZDRM DASH Post Data"));
+
+    JLabel urlLabel = new JLabel("Data");
+    ezdrmDashPostDataField = namedComponent("ezdrmDashPostDataField", new JTextField());
+
+    GroupLayout layout = new GroupLayout(panel);
+    layout.setAutoCreateContainerGaps(true);
+    layout.setAutoCreateGaps(true);
+    panel.setLayout(layout);
+    layout.setHorizontalGroup(layout.createSequentialGroup()
+        .addComponent(urlLabel)
+        .addComponent(ezdrmDashPostDataField));
+    layout.setVerticalGroup(layout.createParallelGroup(Alignment.BASELINE)
+        .addComponent(urlLabel)
+        .addComponent(ezdrmDashPostDataField));
+    return panel;
+  }
+    
   private static <T extends JComponent> T namedComponent(String name, T component) {
     component.setName(name);
     return component;
