@@ -396,6 +396,22 @@ public class HlsSamplerPanel extends JPanel {
   public String getMasterUrl() {
     return masterUrlField.getText();
   }
+  
+  public void setEzdrmDashPostUrl(String url) {
+    ezdrmDashPostUrlField.setText(url);
+  }
+
+  public String getEzdrmDashPostUrl() {
+    return ezdrmDashPostUrlField.getText();
+  }
+  
+  public void setEzdrmDashPostData(String data) {
+    ezdrmDashPostDataField.setText(data);
+  }
+
+  public String getEzdrmDashPostData() {
+    return ezdrmDashPostDataField.getText();
+  }
 
   public boolean isPlayVideoDuration() {
     return playVideoDurationOption.isSelected();
