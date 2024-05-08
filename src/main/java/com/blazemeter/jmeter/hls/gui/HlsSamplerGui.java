@@ -48,6 +48,8 @@ public class HlsSamplerGui extends AbstractSamplerGui {
     super.configure(el);
     HlsSampler sampler = (HlsSampler) el;
     hlsSamplerPanel.setMasterUrl(sampler.getMasterUrl());
+    hlsSamplerPanel.setEzdrmDashPostUrl(sampler.getEzdrmDashPostUrl());
+    hlsSamplerPanel.setEzdrmDashPostData(sampler.getEzdrmDashPostData());
     hlsSamplerPanel.setPlayVideoDuration(sampler.isPlayVideoDuration());
     hlsSamplerPanel.setPlaySeconds(sampler.getPlaySeconds());
     hlsSamplerPanel.setAudioLanguage(sampler.getAudioLanguage());
@@ -64,6 +66,8 @@ public class HlsSamplerGui extends AbstractSamplerGui {
     if (s instanceof HlsSampler) {
       HlsSampler sampler = (HlsSampler) s;
       sampler.setMasterUrl(hlsSamplerPanel.getMasterUrl());
+      sampler.setEzdrmDashPostUrl(sampler.getEzdrmDashPostUrl());
+      sampler.setEzdrmDashPostData(sampler.getEzdrmDashPostData());
       sampler.setPlayVideoDuration(hlsSamplerPanel.isPlayVideoDuration());
       sampler.setPlaySeconds(hlsSamplerPanel.getPlaySeconds());
       sampler.setAudioLanguage(hlsSamplerPanel.getAudioLanguage());
@@ -79,6 +83,8 @@ public class HlsSamplerGui extends AbstractSamplerGui {
   public void clearGui() {
     super.clearGui();
     hlsSamplerPanel.setMasterUrl("");
+    hlsSamplerPanel.setEzdrmDashPostUrl("");
+    hlsSamplerPanel.setEzdrmDashPostData("");
     hlsSamplerPanel.setPlayVideoDuration(false);
     hlsSamplerPanel.setPlaySeconds("");
     hlsSamplerPanel.setAudioLanguage("");

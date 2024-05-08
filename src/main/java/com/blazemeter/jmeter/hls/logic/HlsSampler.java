@@ -32,6 +32,8 @@ public class HlsSampler extends HTTPSamplerBase implements Interruptible {
   private static final Logger LOG = LoggerFactory.getLogger(HlsSampler.class);
 
   private static final String MASTER_URL_PROPERTY_NAME = "HLS.URL_DATA";
+  private static final String EZDRM_DASH_POST_URL_PROPERTY_NAME = "HLS.EZDRM_DASH_POST_URL";
+  private static final String EZDRM_DASH_POST_DATA_PROPERTY_NAME = "HLS.EZDRM_DASH_POST_DATA";
   private static final String CUSTOM_RESOLUTION_PROPERTY_NAME = "HLS.RES_DATA";
   private static final String CUSTOM_BANDWIDTH_PROPERTY_NAME = "HLS.NET_DATA";
   private static final String PLAY_SECONDS_PROPERTY_NAME = "HLS.SECONDS_DATA";
@@ -97,6 +99,22 @@ public class HlsSampler extends HTTPSamplerBase implements Interruptible {
 
   public void setMasterUrl(String url) {
     this.setProperty(MASTER_URL_PROPERTY_NAME, url);
+  }
+  
+  public String getEzdrmDashPostUrl() {
+    return this.getPropertyAsString(EZDRM_DASH_POST_URL_PROPERTY_NAME);
+  }
+
+  public void setEzdrmDashPostUrl(String url) {
+    this.setProperty(EZDRM_DASH_POST_URL_PROPERTY_NAME, url);
+  }
+  
+  public String getEzdrmDashPostData() {
+    return this.getPropertyAsString(EZDRM_DASH_POST_URL_PROPERTY_NAME);
+  }
+
+  public void setEzdrmDashPostData(String data) {
+    this.setProperty(EZDRM_DASH_POST_URL_PROPERTY_NAME, data);
   }
 
   public boolean isPlayVideoDuration() {
