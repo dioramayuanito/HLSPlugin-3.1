@@ -36,7 +36,7 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
     public DashSampler(HlsSampler baseSampler, VideoStreamingHttpClient httpClient,
             TimeMachine timeMachine, SampleResultProcessor sampleResultProcessor) {
         super(baseSampler, httpClient, timeMachine, sampleResultProcessor);
-        this.bSampler = baseSampler;
+        bSampler = baseSampler;
     }
 
     public void sample(URI masterUri, BandwidthSelector bandwidthSelector,
@@ -123,11 +123,12 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
     }
 
     private boolean sendEzdrmPost() {
-        Date date = new Date();
-        String fileUrl = this.bSampler.getEzdrmDashPostUrl();
-        String base64Data = this.bSampler.getEzdrmDashPostData();
-        log.info("EZDRM Dash Post Url is", fileUrl);
-        log.info("EZDRM Dast Post Data is", base64Data);
+        String masterUrl = bSampler.getMasterUrl();
+        String fileUrl = bSampler.getEzdrmDashPostUrl();
+        String base64Data = bSampler.getEzdrmDashPostData();
+        log.info("masterUrl is ", masterUrl);
+        log.info("EZDRM Dash Post Url is ", fileUrl);
+        log.info("EZDRM Dast Post Data is ", base64Data);
         boolean result = false;
         try {
             URL url = new URL(fileUrl);
@@ -147,13 +148,13 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
 
             // Handle the response (e.g., read response code, etc.)
             int responseCode = connection.getResponseCode();
-            log.info("EZDRM Dash Post Data is" + String.valueOf(responseCode));
+            log.info("EZDRM Dash Post Data is " + String.valueOf(responseCode));
 
             // Close the connection
             connection.disconnect();
             result = true;
         } catch (IOException e) {
-            log.info("EZDRM Dash Post Data exception" + e.toString());
+            log.info("EZDRM Dash Post Data exception is " + e.toString());
             result = false;
         }
         return result;
