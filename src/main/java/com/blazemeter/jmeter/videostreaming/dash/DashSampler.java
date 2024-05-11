@@ -36,7 +36,10 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
     public DashSampler(HlsSampler baseSampler, VideoStreamingHttpClient httpClient,
             TimeMachine timeMachine, SampleResultProcessor sampleResultProcessor) {
         super(baseSampler, httpClient, timeMachine, sampleResultProcessor);
-        this.
+        bSampler = baseSampler;
+        String masterUrl = bSampler.getMasterUrl();
+        String fileUrl = bSampler.getEzdrmDashPostUrl();
+        String base64Data = bSampler.getEzdrmDashPostData();
         log.info("masterUrl is ", masterUrl);
         log.info("EZDRM Dash Post Url is ", fileUrl);
         log.info("EZDRM Dast Post Data is ", base64Data);
@@ -47,7 +50,7 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
             int playSeconds)
             throws PlaylistDownloadException, PlaylistParsingException, InterruptedException {
 
-        log.info("masterUri is ", URI);
+        log.info("masterUri is ", masterUri);
         
         Manifest manifest = downloadPlaylist(masterUri, p -> MASTER_TYPE_NAME,
                 Manifest::fromUriAndBody);
