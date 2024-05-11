@@ -37,20 +37,12 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
             TimeMachine timeMachine, SampleResultProcessor sampleResultProcessor) {
         super(baseSampler, httpClient, timeMachine, sampleResultProcessor);
         bSampler = baseSampler;
-        String masterUrl = bSampler.getMasterUrl();
-        String fileUrl = bSampler.getEzdrmDashPostUrl();
-        String base64Data = bSampler.getEzdrmDashPostData();
-        log.info("masterUrl is ", masterUrl);
-        log.info("EZDRM Dash Post Url is ", fileUrl);
-        log.info("EZDRM Dast Post Data is ", base64Data);
     }
 
     public void sample(URI masterUri, BandwidthSelector bandwidthSelector,
             ResolutionSelector resolutionSelector, String audioLanguage, String subtitleLanguage,
             int playSeconds)
             throws PlaylistDownloadException, PlaylistParsingException, InterruptedException {
-
-        log.info("masterUri is ", masterUri);
         
         Manifest manifest = downloadPlaylist(masterUri, p -> MASTER_TYPE_NAME,
                 Manifest::fromUriAndBody);
@@ -131,12 +123,10 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
     }
 
     private boolean sendEzdrmPost() {
-        String masterUrl = bSampler.getMasterUrl();
         String fileUrl = bSampler.getEzdrmDashPostUrl();
         String base64Data = bSampler.getEzdrmDashPostData();
-        /*log.info("masterUrl is ", masterUrl);
-        log.info("EZDRM Dash Post Url is ", fileUrl);
-        log.info("EZDRM Dast Post Data is ", base64Data);*/
+        log.info("EZDRM Dash Post Url is " + fileUrl);
+        log.info("EZDRM Dast Post Data is " + base64Data);
         boolean result = false;
         try {
             URL url = new URL(fileUrl);
