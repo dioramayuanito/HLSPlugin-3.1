@@ -153,7 +153,7 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
             connection.disconnect();
             result = true;
         } catch (IOException e) {
-            log.info("EZDRM Dash Post Data exception" + e.getMessage());
+            log.info("EZDRM Dash Post Data exception" + e.toString());
             result = false;
         }
         return result;
