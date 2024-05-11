@@ -110,11 +110,11 @@ public class HlsSampler extends HTTPSamplerBase implements Interruptible {
   }
   
   public String getEzdrmDashPostData() {
-    return this.getPropertyAsString(EZDRM_DASH_POST_URL_PROPERTY_NAME);
+    return this.getPropertyAsString(EZDRM_DASH_POST_DATA_PROPERTY_NAME);
   }
 
   public void setEzdrmDashPostData(String data) {
-    this.setProperty(EZDRM_DASH_POST_URL_PROPERTY_NAME, data);
+    this.setProperty(EZDRM_DASH_POST_DATA_PROPERTY_NAME, data);
   }
 
   public boolean isPlayVideoDuration() {
