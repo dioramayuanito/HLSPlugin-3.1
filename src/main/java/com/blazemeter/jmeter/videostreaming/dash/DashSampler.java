@@ -126,7 +126,7 @@ public class DashSampler extends VideoStreamingSampler<Manifest, DashMediaSegmen
         String fileUrl = bSampler.getEzdrmDashPostUrl();
         String base64Data = bSampler.getEzdrmDashPostData();
         log.info("EZDRM Dash Post Url is " + fileUrl);
-        log.info("EZDRM Dast Post Data is " + base64Data);
+        //log.info("EZDRM Dast Post Data is " + base64Data);
         boolean result = false;
         try {
             URL url = new URL(fileUrl);
